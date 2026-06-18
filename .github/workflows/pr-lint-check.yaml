@@ -1,0 +1,17 @@
+name: PR Lint Check (Assignment-3)
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Custom Lint Action
+        uses: nikhilk7/custom-lint-action@main
